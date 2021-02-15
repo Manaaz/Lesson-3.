@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" >
+<head>
+    <meta charset="utf-8">
+    <title>Lesson 3.</title>
+</head>
+<body>
+
+    <p>Hi! Lesson 3.</p>     
+    <script>
+        
+        alert("Результат выполнения заданий выводится в консоль!");
+    	
+        //Задание 1
+        console.log("Задание 1. Вывод в консоль простых чисел в промежутке от 0 до 100");
+        
+        var i = 0;
+        var n = 100;
+        while (i <=  n) {
+            let j = 2;
+            while (j <= i) {
+                if ((i % j == 0) ) {
+                    break;
+                } else {
+                    console.log(i);
+                    break;
+                }
+                j++;
+            }
+            i++;
+        }
+        console.log("///////////////////////");
+        
+        //Задание 2-3      
+        console.log("Задание 2-3. Подсчет стоимости корзины в зависимости от находящихся в ней товаров");
+        
+        var Items = [];
+        
+        //Наименование, Стоимость, Количество
+        Items.push(['Наушники', 700, 1]);
+        Items.push(['Мышка', 350, 2]);
+        Items.push(['Клавиатура', 450, 3]);
+                
+        function countBasketPrice(Items){
+            let summ = 0;
+            for (let i in Items){ //
+                summ = summ + (Items[i][1]*Items[i][2]); //Цена * количество
+            }
+            return summ;
+        }
+        
+        console.log("Задание 2-3. Сумма корзины: " + countBasketPrice(Items));
+        console.log("///////////////////////");
+        
+        //Задание 4.
+        console.log("Задание 4.  Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так: for(…){// здесь пусто}");
+        
+        for(i = 0;  i <= 9; console.log("Задание 4. "+ i++)) { };
+        console.log("///////////////////////");
+        
+        //Задание 5.
+        //Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5
+        console.log("Задание 5. Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5");
+        var pyramid= "";
+        
+        function getPyramid(counter, stringPrint){
+            
+            let pyramid = "";
+            for(i = 0; i <= counter; i++){
+                pyramid = pyramid + stringPrint;
+                console.log(pyramid);
+            }
+                
+        }
+        getPyramid(20, "x")
+        
+        
+    </script>
+        
+</body>
+</html>
